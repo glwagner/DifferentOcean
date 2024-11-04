@@ -58,6 +58,8 @@ c_bcs = FieldBoundaryConditions(top=FluxBoundaryCondition(surface_tracer_flux))
 #                                          divergence_scheme=WENO(order=5),
 #                                          vertical_scheme=Centered(order=2))
  
+free_surface = ExplicitFreeSurface()
+
 model = HydrostaticFreeSurfaceModel(; grid,
                                     coriolis = HydrostaticSphericalCoriolis(),
                                     momentum_advection,
